@@ -7,4 +7,9 @@ class CreateArtists < ActiveRecord::Migration[4.2]
       t.string :hometown
     end
   end
+  def down
+    change_table :artists do |t|
+      t.remove :favorite_food
+    end
+  end
 end
